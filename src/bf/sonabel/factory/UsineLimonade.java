@@ -1,26 +1,26 @@
 package bf.sonabel.factory;
 
 
-import bf.sonabel.factory.Limonade;
+import bf.sonabel.afactory.Usine;
 
-public class UsineLimonade {
+public class UsineLimonade implements Usine {
 
     public static void main(String[] args) {
         UsineLimonade ul = new UsineLimonade();
-        Limonade fanta = ul.produireLimonade("fanta");
-        fanta.boire();
-        Limonade sprite = ul.produireLimonade("sprite");
-        sprite.boire();
-        Limonade coca = ul.produireLimonade("coca");
-        coca.boire();
-        Limonade fantaO = ul.produireLimonade("fantaOrange");
-        fantaO.boire();
-        Limonade hawai = ul.produireLimonade("hawai");
-        hawai.boire();
+        Limonade fanta = ul.produire("fanta");
+        fanta.utiliser();
+        Limonade sprite = ul.produire("sprite");
+        sprite.utiliser();
+        Limonade coca = ul.produire("coca");
+        coca.utiliser();
+        Limonade fantaO = ul.produire("fantaOrange");
+        fantaO.utiliser();
+        Limonade hawai = ul.produire("hawai");
+        hawai.utiliser();
 
     }
 
-    private Limonade produireLimonade(String nom) {
+    public Limonade produire(String nom) {
         switch (nom) {
             case "fanta":
                 return new Fanta();

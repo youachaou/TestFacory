@@ -1,6 +1,8 @@
 package bf.sonabel.factory;
 
-public interface Limonade {
+import bf.sonabel.afactory.Produit;
 
-    void boire();
+public interface Limonade extends Produit {
+
+    //void boire();
 }
